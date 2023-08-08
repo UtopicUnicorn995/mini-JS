@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rotating Navigation</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="circle-container">
+        <div class="circle">
+          <button id="close">
+            <i class="fas fa-times"></i>
+          </button>
+          <button id="open">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="content">
+        <h1>Developers Portfolio</h1>
+        <small class="small">Christian Barrios</small>
+        <p class="text">
+          I am a full stack developer based in Iloilo, Philippines. I can
+          develop responsive and fun websites from scratch and raise them into
+          modern user-friendly web experiences.
+        </p>
+        <p class="text">
+          Transforming my creativity and knowledge into a websites has been my
+          passion for over a year. I have been helping various clients and
+          fellow developers to establish their presence online. I always strive
+          to learn about the newest technologies and frameworks.
+        </p>
+        <h3>Please Select Themes</h3>
+        <div class="content-container">
+          <div
+            class="panel active theme-0"
+            style="
+              background-image: url(https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80);
+            "
+          >
+            <h2>Wooden</h2>
+          </div>
+
+          <div
+            class="panel theme-1"
+            style="
+              background-image: url(https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80);
+            "
+          >
+            <h2>Snowy Mountain</h2>
+          </div>
+
+          <div
+            class="panel theme-2"
+            style="
+              background-image: url(https://images.unsplash.com/photo-1490735891913-40897cdaafd1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+            "
+          >
+            <h2>Sunset sky</h2>
+          </div>
+
+          <div
+            class="panel theme-3"
+            style="
+              background-image: url(https://images.unsplash.com/photo-1502239608882-93b729c6af43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+            "
+          >
+            <h2>Dark Leaves</h2>
+          </div>
+
+          <div
+            class="panel theme-4"
+            style="
+              background-image: url(https://images.unsplash.com/photo-1582068955580-dcc6c0812b21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80);
+            "
+          >
+            <h2>Puppies</h2>
+          </div>
+        </div>
+        <p class="text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio voluptas
+          nisi consectetur nobis, ad libero officia iste modi fuga dicta quas
+          eos veniam itaque nihil exercitationem et asperiores, dolore suscipit,
+          sapiente repellat rerum ratione maxime? Laboriosam, maxime? Fuga autem
+          maxime eligendi, ducimus eum reiciendis. Quam nihil sint amet eius
+          dolore reprehenderit, sed, adipisci quaerat tenetur neque vitae
+          corrupti magnam sunt corporis. Nobis, veniam perferendis eligendi
+          vitae ratione ex doloremque. Ab voluptas enim quae obcaecati
+          voluptatem.
+        </p>
+      </div>
+    </div>
+
+    <nav>
+      <ul>
+        <li><i class="fas fa-home"> Home</i></li>
+        <li><i class="fas fa-user-alt"> About</i></li>
+        <li><i class="fas fa-envelope"> Contact</i></li>
+      </ul>
+    </nav>
+    <script src="script.js"></script>
+  </body>
+</html>

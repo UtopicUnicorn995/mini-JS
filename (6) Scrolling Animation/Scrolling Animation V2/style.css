@@ -1,0 +1,145 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow-x: hidden;
+  background-image: url(./assets/images/clark-tibbs-oqStl2L5oxI-unsplash.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.content {
+  width: 550px;
+  height: 300px;
+  background-color: green;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  border-radius: 15px;
+  transform: translateX(400%);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: transform 0.5s ease;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.3);
+  transition: box-shadow 0.3s;
+}
+
+.content:hover {
+  cursor: pointer;
+  transform: scale(1.01) !important;
+  box-shadow: 0px 0px 8px rgba(255, 255, 255, 0.6);
+  transition: all 0.3s;
+}
+
+h1 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 45px;
+}
+
+.content:nth-child(even) {
+  transform: translateX(-400%);
+}
+
+.content.show {
+  transform: translateX(0);
+  transition: transform 0.5s ease;
+}
+
+span {
+  text-shadow: 0px 0px 4px rgba(255, 255, 255, 0.5);
+}
+
+span:nth-child(1) {
+  animation: span1 0.5s 0.9s infinite linear;
+}
+
+span:nth-child(2) {
+  animation: span2 0.5s 0.3s infinite linear;
+}
+
+span:nth-child(3) {
+  animation: span3 0.5s 0.6s infinite linear;
+}
+
+span:nth-child(4) {
+  animation: span4 0.5s 0.9s infinite linear;
+}
+
+span:nth-child(5) {
+  animation: span5 0.5s 0.6s infinite linear;
+}
+
+span:nth-child(6) {
+  animation: span6 0.5s 0.3s infinite linear;
+}
+
+span:nth-child(7) {
+  animation: span7 0.5s 0.6s infinite linear;
+}
+
+span:nth-child(8) {
+  animation: span8 0.5s 0.9s infinite linear;
+}
+
+@keyframes span1 {
+  to {
+    color: rgb(105, 138, 185);
+  }
+}
+
+@keyframes span2 {
+  to {
+    color: rgb(126, 109, 86);
+  }
+}
+
+@keyframes span3 {
+  to {
+    color: rgb(155, 107, 78);
+  }
+}
+
+@keyframes span4 {
+  to {
+    color: rgb(103, 183, 65);
+  }
+}
+
+@keyframes span5 {
+  to {
+    color: rgb(36, 124, 134);
+  }
+}
+
+@keyframes span6 {
+  to {
+    color: rgb(32, 28, 92);
+  }
+}
+
+@keyframes span7 {
+  to {
+    color: rgb(50, 11, 44);
+  }
+}
+
+@keyframes span8 {
+  to {
+    color: rgb(204, 13, 83);
+  }
+}

@@ -1,0 +1,248 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Lato", sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  background-color: #333;
+  color: #222;
+}
+
+.container {
+  background-color: #fafafa;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  transform-origin: top left;
+  transition: transform 0.5s linear;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 50px;
+}
+
+.container.show-nav {
+  transform: rotate(-20deg);
+}
+
+.circle-container {
+  position: fixed;
+  top: -100px;
+  left: -100px;
+  z-index: 100;
+}
+
+.circle {
+  background-color: #ff7979;
+  height: 200px;
+  width: 200px;
+  border-radius: 50%;
+  position: relative;
+  transition: transform 0.5s linear;
+  z-index: 100;
+}
+
+.container.show-nav .circle {
+  transform: rotate(-70deg);
+}
+
+.circle button {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 100px;
+  background: transparent;
+  border: none;
+  font-size: 26px;
+  color: #ffffff;
+}
+
+.circle button:focus {
+  outline: none;
+}
+
+.circle button#open {
+  top: 47%;
+  left: 60%;
+}
+
+.circle button#close {
+  left: 53%;
+  top: 60%;
+  transform: rotate(90deg);
+  transform-origin: top left;
+}
+
+.container.show-nav + nav li {
+  transform: translateX(0);
+  transition-delay: 0.3s;
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+}
+
+nav ul {
+  list-style-type: none;
+  padding-left: 30px;
+}
+
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  transform: translateX(-100%);
+  transition: transform 0.4s ease-in;
+}
+
+nav ul li i {
+  font-size: 20px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+nav ul li i:hover {
+  color: #ff7979;
+  transform: scale(1.01);
+  transition: all 0.3s;
+}
+
+nav ul li + li {
+  margin-left: 15px;
+  transform: translateX(-150%);
+}
+
+nav ul li + li + li {
+  margin-left: 30px;
+  transform: translateX(-200%);
+}
+
+.content .content-container {
+  max-width: 100%;
+}
+
+.content {
+  max-width: 1000px;
+  margin: 50px auto;
+}
+
+.content h1 {
+  margin: 0;
+}
+
+.content small {
+  color: #555;
+  font-style: italic;
+}
+
+.content p {
+  color: #333;
+  line-height: 1.5;
+}
+
+.content-container {
+  display: flex;
+  position: relative;
+  height: 550px;
+  column-gap: 15px;
+}
+
+.panel {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  align-items: end;
+  border-radius: 50px;
+  flex: 0.5;
+  transition: flex 0.5s ease;
+  box-shadow: 0 0 9px rgba(52, 51, 51, 0.6);
+}
+
+.panel:hover {
+  cursor: pointer;
+}
+
+.panel.active {
+  flex: 5;
+}
+
+h1,
+h3,
+p {
+  text-shadow: 0 0 2px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  opacity: 0;
+  color: #fff;
+  left: 25px;
+  position: absolute;
+  text-shadow: 0 0 20px rgba(0, 0, 0, 0.99);
+}
+
+.panel.active h2 {
+  opacity: 1;
+  transition: opacity 0.5s ease 0.3s;
+  text-shadow: 0px 0px 8px rgba(0, 0, 0, 0.99);
+}
+
+@media (max-width: 480px) {
+  .panel:nth-child(4),
+  .panel:nth-child(5) {
+    display: none;
+  }
+}
+
+.wood {
+  background-image: url("https://images.unsplash.com/photo-1495195129352-aeb325a55b65?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
+}
+
+.mountain {
+  background-image: url("https://images.unsplash.com/photo-1454496522488-7a8e488e8606?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1176&q=80");
+}
+
+.mountain .text:last-child {
+  text-shadow: 0 0 4px rgba(255, 254, 254, 0.7);
+}
+
+.dark {
+  background-image: url("https://images.unsplash.com/photo-1502239608882-93b729c6af43?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.dark h1,
+.dark h3,
+.puppies h1,
+.puppies h3 {
+  color: white;
+}
+
+.dark .text {
+  color: #cacaca;
+}
+
+.dark small {
+  color: #cacaca;
+}
+
+.sunset {
+  background-image: url("https://images.unsplash.com/photo-1490735891913-40897cdaafd1?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.puppies {
+  background-image: url("https://images.unsplash.com/photo-1582068955580-dcc6c0812b21?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1170&q=80");
+}
+
+.puppies .text {
+  color: white;
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.7);
+}

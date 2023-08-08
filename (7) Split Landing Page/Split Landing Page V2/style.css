@@ -1,0 +1,92 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.container {
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 50%;
+  transition: all 0.7s ease-in-out;
+  padding-bottom: 100px;
+  overflow: hidden;
+}
+
+.box {
+  width: 170px;
+  height: 140px;
+  background-color: rgba(255, 255, 255, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  row-gap: 10px;
+  border-radius: 25px;
+  text-decoration: none;
+  color: rgb(36, 36, 36);
+  transition: all 0.3s ease;
+}
+
+.box:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+  transition: all 0.3s ease;
+  color: black;
+}
+
+h2 {
+  font-size: 36px;
+  margin: 0;
+}
+
+.left-side {
+  background-image: url(./assets/cat.jpg);
+}
+
+.right-side {
+  background-image: url(./assets/dog.jpg);
+}
+
+.left-side.active {
+  width: 80%;
+}
+
+.left-side.active .box {
+  width: 220px;
+  transition: width 0.3s ease;
+}
+
+.right-side.smaller {
+  width: 20%;
+  filter: grayscale(50%);
+}
+
+.right-side.active {
+  width: 80%;
+}
+
+.right-side.active .box {
+  width: 220px;
+  transition: width 0.3s ease;
+}
+
+.left-side.smaller {
+  width: 20%;
+  filter: grayscale(50%);
+}
